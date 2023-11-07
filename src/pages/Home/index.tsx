@@ -4,7 +4,7 @@ import * as C from "./styles";
 //Components
 
 //Swiper
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -15,12 +15,12 @@ import TopBar from "../../components/TopBar";
 const Home = () => {
   const images = [
     { id: 1, image: "src/assets/images/logo.png" },
-    { id: 2, image: "src/assets/images/logo.png" },
-    { id: 3, image: "src/assets/images/logo.png" },
-    { id: 4, image: "src/assets/images/logo.png" },
-    { id: 5, image: "src/assets/images/logo.png" },
-    { id: 6, image: "src/assets/images/logo.png" },
-    { id: 7, image: "src/assets/images/logo.png" },
+    { id: 2, image: "src/assets/images/carro.jpeg" },
+    { id: 3, image: "src/assets/images/carro2.jpeg" },
+    { id: 4, image: "src/assets/images/carro3.webp" },
+    { id: 5, image: "src/assets/images/carro4.jpg" },
+    { id: 6, image: "src/assets/images/carro5.webp" },
+    { id: 7, image: "src/assets/images/carro.jpeg" },
   ];
 
   return (
@@ -41,12 +41,13 @@ const Home = () => {
         </C.AreaText>
         <C.Swiper>
           <Swiper
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={0}
             slidesPerView={3}
             navigation
             pagination
             loop
+            autoplay={{ delay: 3000 }}
           >
             {images.map((image) => (
               <SwiperSlide key={image.id}>
