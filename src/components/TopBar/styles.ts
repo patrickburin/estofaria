@@ -22,7 +22,7 @@ export const NavBar = styled.div`
   display: flex;
   flex-direction: column;
   padding: 5px 15px;
-  background: #000000;
+  background: #353535;
   height: 100%;
   font-size: 18px;
 
@@ -32,7 +32,8 @@ export const NavBar = styled.div`
     align-items: center;
     padding: 5px 10px;
     gap: 10px;
-    color: #ffffff;
+    color: #000000;
+    cursor: pointer;
   }
 
   hr {

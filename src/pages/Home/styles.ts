@@ -49,7 +49,7 @@ export const AreaText = styled.div`
 
 export const Swiper = styled.div`
   display: flex;
-  width: 80%;
+  width: 90%;
 
   .swiper-slide {
     display: flex;
@@ -61,5 +61,14 @@ export const Swiper = styled.div`
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #a82525;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #a82525;
   }
 `;

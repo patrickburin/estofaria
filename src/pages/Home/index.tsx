@@ -1,6 +1,9 @@
 //Styles
 import * as C from "./styles";
 
+//react
+import { useEffect, useState } from "react";
+
 //Components
 
 //Swiper
@@ -13,6 +16,8 @@ import "swiper/css/scrollbar";
 import TopBar from "../../components/TopBar";
 
 const Home = () => {
+  const [slidePerView, setSlidePerView] = useState(5);
+
   const images = [
     { id: 1, image: "src/assets/images/logo.png" },
     { id: 2, image: "src/assets/images/carro.jpeg" },
@@ -22,6 +27,24 @@ const Home = () => {
     { id: 6, image: "src/assets/images/carro5.webp" },
     { id: 7, image: "src/assets/images/carro.jpeg" },
   ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setSlidePerView(1);
+      } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+        setSlidePerView(3);
+      } else {
+        setSlidePerView(5);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <C.Content>
@@ -43,10 +66,9 @@ const Home = () => {
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={0}
-            slidesPerView={3}
+            slidesPerView={slidePerView}
             navigation
             pagination
-            loop
             autoplay={{ delay: 3000 }}
           >
             {images.map((image) => (
