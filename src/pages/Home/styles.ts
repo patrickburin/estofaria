@@ -3,26 +3,36 @@ import styled from "styled-components";
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   min-height: 100vh;
+  max-width: 100vw;
   background-color: #3e3e3e;
-
-  .topBar {
-    display: flex;
-  }
 
   .content {
     display: flex;
+    width: 90%;
     flex-direction: column;
-    gap: 15px;
-    align-items: center;
+    gap: 30px;
+  }
+
+  .divider {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 30px;
   }
 `;
 
 export const AreaText = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 98%;
   padding: 10px;
   gap: 10px;
   border-radius: 10px;
@@ -49,7 +59,7 @@ export const AreaText = styled.div`
 
 export const Swiper = styled.div`
   display: flex;
-  width: 90%;
+  width: auto;
 
   .swiper-slide {
     display: flex;
