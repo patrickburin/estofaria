@@ -5,6 +5,9 @@ export const NavBar = styled.div`
   flex-direction: column;
   padding: 5px 20px;
   gap: 20px;
+  position: fixed;
+  z-index: 999;
+  margin-top: 90px;
 
   .item {
     display: flex;

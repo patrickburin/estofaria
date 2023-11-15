@@ -13,6 +13,9 @@ export const Content = styled.div`
     width: 90%;
     flex-direction: column;
     gap: 30px;
+    margin-top: 90px;
+    margin-left: 105px;
+    background-color: #3e3e3e;
   }
 
   .divider {
@@ -25,7 +28,6 @@ export const Content = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
-    margin-bottom: 30px;
   }
 `;
 
