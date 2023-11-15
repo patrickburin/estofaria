@@ -98,11 +98,11 @@ const Home = () => {
             </div> */}
           </C.AreaText>
           <div className="cards">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <Card title="título" image="src\assets\images\eeeee.jpg" />
+            <Card title="título" image="src\assets\images\eeeee.jpg" />
+            <Card title="título" image="src\assets\images\eeeee.jpg" />
+            <Card title="título" image="src\assets\images\eeeee.jpg" />
+            <Card title="título" image="src\assets\images\eeeee.jpg" />
           </div>
         </div>
       </div>

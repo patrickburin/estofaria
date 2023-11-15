@@ -23,6 +23,7 @@ export const Card = styled.div`
   .image {
     display: flex;
     width: 100%;
+    height: 100%;
     justify-content: center;
     background-color: green;
   }

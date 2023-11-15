@@ -1,11 +1,17 @@
+interface CardProps {
+  title: string;
+  image: string;
+}
+
+//styles
 import * as C from "./styles";
 
-const Card = () => {
+const Card = ({ title, image }: CardProps) => {
   return (
     <C.Card>
-      <div className="title">Título</div>
+      <div className="title">{title}</div>
       <div className="image">
-        <img src="src/assets/images/eeeee.jpg" />
+        <img src={image} />
       </div>
     </C.Card>
   );
