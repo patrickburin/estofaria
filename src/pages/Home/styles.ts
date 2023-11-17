@@ -7,6 +7,7 @@ export const Content = styled.div`
   min-height: 100vh;
   max-width: 100vw;
   background-color: #3e3e3e;
+  padding-bottom: 20px;
 
   .content {
     display: flex;

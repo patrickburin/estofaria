@@ -10,3 +10,8 @@ export const Cars = styled.div`
   flex-wrap: wrap;
   gap: 32px;
 `;
+
+export const Car = styled.div`
+  display: flex;
+  width: 100%;
+`;
