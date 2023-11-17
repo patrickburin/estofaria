@@ -12,6 +12,7 @@ export const Card = styled.div`
   background: #353535;
   padding: 10px 15px;
   gap: 15px;
+  cursor: pointer;
 
   .title {
     font-size: 28px;

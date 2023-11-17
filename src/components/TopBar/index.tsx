@@ -3,10 +3,10 @@ import * as C from "./styles";
 
 //React
 import { useNavigate } from "react-router-dom";
+import { useChecked } from "../../context";
 
 //Components
 import ButtonMenu from "../ButtonMenu";
-import { useChecked } from "../../context/checkedContext";
 
 const TopBar = () => {
   const { checked, setChecked } = useChecked();

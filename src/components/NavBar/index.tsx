@@ -1,3 +1,8 @@
+interface NavBarProps {
+  navigateTo: string;
+  setShow: (show: boolean) => void;
+}
+
 //styles
 import * as C from "./styles";
 
@@ -6,21 +11,34 @@ import { Drawer } from "@mui/material";
 
 //react icons
 import { AiOutlineCar, AiOutlineHome } from "react-icons/ai";
-import { GiCarSeat, GiSteeringWheel } from "react-icons/gi";
+import { GiSteeringWheel } from "react-icons/gi";
 import { VscFeedback } from "react-icons/vsc";
 
 //navigate
 import { useNavigate } from "react-router-dom";
 
-//checkedContext
-import { useChecked } from "../../context/checkedContext";
+//react
+import { useState, useContext } from "react";
+import { useChecked } from "../../context";
+import { VisibilityContext } from "../../AppContext";
 
 const NavBar = () => {
   const { checked, setChecked } = useChecked();
   const navigate = useNavigate();
 
+  //context
+  const { showCars, setShowCars } = useContext(VisibilityContext);
+  const { showSteeringWheels, setShowSteeringWheels } =
+    useContext(VisibilityContext);
+  const { showFeedbacks, setShowFeedbacks } = useContext(VisibilityContext);
+
   const handleButton = () => {
     setChecked(!checked);
+  };
+
+  const handleClick = ({ navigateTo, setShow }: NavBarProps) => {
+    navigate(navigateTo);
+    setShow(true);
   };
 
   return (
@@ -36,7 +54,7 @@ const NavBar = () => {
       <div
         className="item"
         onClick={() => {
-          navigate("/carros");
+          handleClick({ navigateTo: "/carros", setShow: setShowCars });
         }}
       >
         <AiOutlineCar size={50} />
@@ -45,16 +63,10 @@ const NavBar = () => {
       <div
         className="item"
         onClick={() => {
-          navigate("/interiores");
-        }}
-      >
-        <GiCarSeat size={50} />
-      </div>
-
-      <div
-        className="item"
-        onClick={() => {
-          navigate("/volantes");
+          handleClick({
+            navigateTo: "/volantes",
+            setShow: setShowSteeringWheels,
+          });
         }}
       >
         <GiSteeringWheel size={50} />
@@ -63,7 +75,7 @@ const NavBar = () => {
       <div
         className="item"
         onClick={() => {
-          navigate("/feedbacks");
+          handleClick({ navigateTo: "/feedbacks", setShow: setShowFeedbacks });
         }}
       >
         <VscFeedback size={50} />
@@ -89,16 +101,6 @@ const NavBar = () => {
           >
             <AiOutlineCar size={40} />
             Carros
-          </div>
-          <hr />
-          <div
-            className="item"
-            onClick={() => {
-              navigate("/interiores");
-            }}
-          >
-            <GiCarSeat size={40} />
-            Interiores
           </div>
           <hr />
           <div

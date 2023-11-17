@@ -1,14 +1,15 @@
 interface CardProps {
   title: string;
   image: string;
+  onClick?: () => void;
 }
 
 //styles
 import * as C from "./styles";
 
-const Card = ({ title, image }: CardProps) => {
+const Card = ({ title, image, onClick }: CardProps) => {
   return (
-    <C.Card>
+    <C.Card onClick={onClick}>
       <div className="title">{title}</div>
       <div className="image">
         <img src={image} />
