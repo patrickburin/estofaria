@@ -1,27 +1,21 @@
-# React + TypeScript + Vite
+# Estofaria do Ananias
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto tem como intuito a criação do site da Estofaria do Ananias. O site está em fase final mas já está público para amostra.
+Utilizando React + TypeSCript, o site será totalmente responsivo e servirá de amostra dos trabalhos realizados dentro da estofaria, facilitando a vida do Elizeu (dono) e de seus clientes.
 
-Currently, two official plugins are available:
+## Instruções de instalação
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para "rodar" o repositório localmente, basta seguir os seguintes passos:
 
-## Expanding the ESLint configuration
+1 - clonar o repositório com: git clone https://github.com/patrickburin/estofaria.git
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2 - instalar todas as dependências com: "yarn";
 
-- Configure the top-level `parserOptions` property like this:
+3- iniciar o servidor com: yarn dev.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Com esses passos o projeto irá abrir automaticamente no navegador. Caso não abra automaticamente, basta acessar o endereço: http://localhost:5173/.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Obs: O node precisa estar instalado em sua máquina para rodar os comandos
+
+## Observações
+O site ainda está sendo desenvolvido e essa é uma versão não oficial.
