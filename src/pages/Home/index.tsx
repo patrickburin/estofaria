@@ -21,18 +21,18 @@ const Home = () => {
   const [slidePerView, setSlidePerView] = useState(5);
 
   const images = [
-    { id: 1, image: "src/assets/images/carro2.jpeg" },
-    { id: 2, image: "src/assets/images/carro.jpeg" },
-    { id: 3, image: "src/assets/images/carro4.jpg" },
-    { id: 4, image: "src/assets/images/carro.jpeg" },
-    { id: 5, image: "src/assets/images/carro2.jpeg" },
-    { id: 6, image: "src/assets/images/carro4.jpg" },
-    { id: 7, image: "src/assets/images/carro2.jpeg" },
-    { id: 8, image: "src/assets/images/carro.jpeg" },
-    { id: 9, image: "src/assets/images/carro4.jpg" },
-    { id: 10, image: "src/assets/images/carro.jpeg" },
-    { id: 11, image: "src/assets/images/carro2.jpeg" },
-    { id: 12, image: "src/assets/images/carro4.jpg" },
+    { id: 1, image: "src/images/carro2.jpeg" },
+    { id: 2, image: "src/images/carro.jpeg" },
+    { id: 3, image: "src/images/carro4.jpg" },
+    { id: 4, image: "src/images/carro.jpeg" },
+    { id: 5, image: "src/images/carro2.jpeg" },
+    { id: 6, image: "src/images/carro4.jpg" },
+    { id: 7, image: "src/images/carro2.jpeg" },
+    { id: 8, image: "src/images/carro.jpeg" },
+    { id: 9, image: "src/images/carro4.jpg" },
+    { id: 10, image: "src/images/carro.jpeg" },
+    { id: 11, image: "src/images/carro2.jpeg" },
+    { id: 12, image: "src/images/carro4.jpg" },
   ];
 
   useEffect(() => {
@@ -98,9 +98,9 @@ const Home = () => {
             </div> */}
           </C.AreaText>
           <div className="cards">
-            <Card title="Carros" image="src\assets\images\eeeee.jpg" />
-            <Card title="Volantes" image="src\assets\images\eeeee.jpg" />
-            <Card title="Feedbacks" image="src\assets\images\eeeee.jpg" />
+            <Card title="Carros" image="src\images\eeeee.jpg" />
+            <Card title="Volantes" image="src\images\eeeee.jpg" />
+            <Card title="Feedbacks" image="src\images\eeeee.jpg" />
           </div>
         </div>
       </div>
