@@ -41,14 +41,14 @@ const Cars = () => {
             <C.Cars>
               <Card
                 title="FIAT 147"
-                image="src/assets/images/eeeee.jpg"
+                image="src/images/eeeee.jpg"
                 onClick={() => {
                   handleCar({ title: "fiat 147", imageCar: imagesFiat });
                 }}
               />
               <Card
                 title="chevrolet"
-                image="src/assets/images/carro.jpeg"
+                image="src/images/carro.jpeg"
                 onClick={() => {
                   handleCar({ title: "chevrolet", imageCar: imagesChevrolet });
                 }}

@@ -24,7 +24,7 @@ const TopBar = () => {
     <C.Container>
       <ButtonMenu checked={checked} onChange={handleButton} />
       <img
-        src="/src/assets/images/logo.png"
+        src="/src/images/logo.png"
         alt="Logo"
         className="logo"
         onClick={handleNavigate}
