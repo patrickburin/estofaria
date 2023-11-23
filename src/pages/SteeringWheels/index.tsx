@@ -13,6 +13,7 @@ import TopBar from "../../components/TopBar";
 import Card from "../../components/Card";
 import ShowImage from "../../components/ShowImage";
 import { VisibilityContext } from "../../AppContext";
+import Footer from "../../components/Footer";
 
 //react
 import { useState, useContext } from "react";
@@ -68,6 +69,7 @@ const SteeringWheels = () => {
           )}
         </div>
       </div>
+      <Footer />
     </S.Content>
   );
 };

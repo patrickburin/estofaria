@@ -1,13 +1,10 @@
 import styled from "styled-components";
+import { device } from "../../device";
 
 export const NavBar = styled.div`
   display: flex;
-  flex-direction: column;
   padding: 5px 20px;
-  gap: 20px;
   position: fixed;
-  z-index: 999;
-  margin-top: 90px;
 
   .item {
     display: flex;
@@ -16,6 +13,19 @@ export const NavBar = styled.div`
     gap: 10px;
     color: #565656;
     cursor: pointer;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 90px;
+  }
+
+  @media ${device.mobile} {
+    .icons {
+      display: none;
+    }
   }
 `;
 
@@ -38,5 +48,11 @@ export const Drawer = styled.div`
 
   hr {
     width: 100%;
+  }
+
+  @media ${device.mobile} {
+    font-size: 30px;
+    padding: 20px 20px;
+    gap: 10px;
   }
 `;
