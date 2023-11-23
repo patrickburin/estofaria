@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 //Components
 import TopBar from "../../components/TopBar";
 import NavBar from "../../components/NavBar";
+import Footer from "../../components/Footer";
 import Card from "../../components/Card";
 
 //Swiper
@@ -88,14 +89,6 @@ const Home = () => {
           </C.Swiper>
           <C.AreaText>
             <div className="title">Confira alguns de nossos trabalhos</div>
-            {/* <div className="text">
-              A Estofaria do Ananias, localizada em Araranguá é uma empresa
-              local com mais de duas décadas de tradição no mercado.
-              Especializada em estofaria automotiva, destaca-se pela alta
-              qualidade de seus produtos e pelo compromisso com a excelência,
-              uma tradição que é passada de geração em geração na família que
-              opera o negócio.
-            </div> */}
           </C.AreaText>
           <div className="cards">
             <Card title="Carros" image="src\images\eeeee.jpg" />
@@ -104,6 +97,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </C.Content>
   );
 };

@@ -13,6 +13,7 @@ import TopBar from "../../components/TopBar";
 import Card from "../../components/Card";
 import ShowImage from "../../components/ShowImage";
 import { VisibilityContext } from "../../AppContext";
+import Footer from "../../components/Footer";
 
 //react
 import { useState, useContext } from "react";
@@ -50,7 +51,10 @@ const Cars = () => {
                 title="chevrolet"
                 image="src/images/carro.jpeg"
                 onClick={() => {
-                  handleCar({ title: "chevrolet", imageCar: imagesChevrolet });
+                  handleCar({
+                    title: "chevrolet",
+                    imageCar: imagesChevrolet,
+                  });
                 }}
               ></Card>
             </C.Cars>
@@ -61,6 +65,7 @@ const Cars = () => {
           )}
         </div>
       </div>
+      <Footer />
     </S.Content>
   );
 };

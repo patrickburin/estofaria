@@ -6,6 +6,9 @@ interface NavBarProps {
 //styles
 import * as C from "./styles";
 
+//device
+import { device } from "../../device";
+
 //material ui
 import { Drawer } from "@mui/material";
 
@@ -43,42 +46,47 @@ const NavBar = () => {
 
   return (
     <C.NavBar>
-      <div
-        className="item"
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        <AiOutlineHome size={50} />
-      </div>
-      <div
-        className="item"
-        onClick={() => {
-          handleClick({ navigateTo: "/carros", setShow: setShowCars });
-        }}
-      >
-        <AiOutlineCar size={50} />
-      </div>
+      <div className="icons">
+        <div
+          className="item"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          <AiOutlineHome size={50} />
+        </div>
+        <div
+          className="item"
+          onClick={() => {
+            handleClick({ navigateTo: "/carros", setShow: setShowCars });
+          }}
+        >
+          <AiOutlineCar size={50} />
+        </div>
 
-      <div
-        className="item"
-        onClick={() => {
-          handleClick({
-            navigateTo: "/volantes",
-            setShow: setShowSteeringWheels,
-          });
-        }}
-      >
-        <GiSteeringWheel size={50} />
-      </div>
+        <div
+          className="item"
+          onClick={() => {
+            handleClick({
+              navigateTo: "/volantes",
+              setShow: setShowSteeringWheels,
+            });
+          }}
+        >
+          <GiSteeringWheel size={50} />
+        </div>
 
-      <div
-        className="item"
-        onClick={() => {
-          handleClick({ navigateTo: "/feedbacks", setShow: setShowFeedbacks });
-        }}
-      >
-        <VscFeedback size={50} />
+        <div
+          className="item"
+          onClick={() => {
+            handleClick({
+              navigateTo: "/feedbacks",
+              setShow: setShowFeedbacks,
+            });
+          }}
+        >
+          <VscFeedback size={50} />
+        </div>
       </div>
 
       <Drawer anchor="left" open={checked} onClose={handleButton}>
@@ -87,6 +95,7 @@ const NavBar = () => {
             className="item"
             onClick={() => {
               navigate("/");
+              handleButton();
             }}
           >
             <AiOutlineHome size={40} />
@@ -97,6 +106,7 @@ const NavBar = () => {
             className="item"
             onClick={() => {
               navigate("/carros");
+              handleButton();
             }}
           >
             <AiOutlineCar size={40} />
@@ -107,6 +117,7 @@ const NavBar = () => {
             className="item"
             onClick={() => {
               navigate("/volantes");
+              handleButton();
             }}
           >
             <GiSteeringWheel size={40} />
@@ -117,6 +128,7 @@ const NavBar = () => {
             className="item"
             onClick={() => {
               navigate("/feedbacks");
+              handleButton();
             }}
           >
             <VscFeedback size={40} />

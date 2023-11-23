@@ -1,13 +1,13 @@
 import styled from "styled-components";
+import { device } from "../../device";
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  min-height: 100vh;
+  gap: 20px;
   max-width: 100vw;
+  min-height: 100vh;
   background-color: #3e3e3e;
-  padding-bottom: 20px;
 
   .content {
     display: flex;
@@ -29,6 +29,17 @@ export const Content = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
+  }
+
+  @media ${device.mobile} {
+    .content {
+      margin-left: 0px;
+    }
+
+    .divider {
+      justify-content: center;
+      gap: 0;
+    }
   }
 `;
 
@@ -57,6 +68,19 @@ export const AreaText = styled.div`
     align-items: center;
     text-align: justify;
     color: #ffffff;
+  }
+
+  @media ${device.mobile} {
+    width: auto;
+    padding: 15px 20px;
+
+    .title {
+      font-size: 30px;
+    }
+
+    .text {
+      font-size: 22px;
+    }
   }
 `;
 
